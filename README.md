@@ -2,8 +2,8 @@
 
 처음에 .env가 없으니 .env.example가져다가 맞춰서 쓸 것
 
-[https://github.com/nsidnev/fastapi-realworld-example-app][structure 참고 링크]
-coding convention 참고 링크 [https://www.python.org/dev/peps/pep-0008/]
+[structure 참고 링크][https://github.com/nsidnev/fastapi-realworld-example-app]
+[coding convention 참고 링크][https://www.python.org/dev/peps/pep-0008/]
 
 Get Started
 -----------
