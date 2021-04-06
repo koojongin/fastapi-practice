@@ -1,16 +1,25 @@
 from typing import Optional
 from fastapi import FastAPI
-
-app = FastAPI()
-
-
-@app.get("/")
-async def read_root():
-    return {"Hello": "World"}
+from starlette.middleware.cors import CORSMiddleware
+from db.session import SessionLocal
+from api.routes.base import router as api_router
 
 
-@app.get("/items/{item_id}")
-async def read_item(item_id: int, q: Optional[str] = None):
-    return {"item_id": item_id, "q": q}
+def get_application() -> FastAPI:
+    PROJECT_NAME = "fast-api-practice"
+    DEBUG: bool = 1
+    VERSION = "0.0.1"
+
+    application = FastAPI(title=PROJECT_NAME, debug=DEBUG, version=VERSION)
+
+    # application.add_middleware(
+    #     CORSMiddleware,
+    #     allow_origin=["*"],
+    #     allow_headers=["*"]
+    # )
+
+    application.include_router(api_router)
+    return application
 
 
+app = get_application()
