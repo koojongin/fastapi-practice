@@ -8,6 +8,7 @@ from db.base_class import Base
 # if TYPE_CHECKING:
 
 class Post(Base):
-    id = Column(Integer, index=True)
+    __tablename__ = "post"
+    id = Column(Integer, primary_key=True, index=True)
     title = Column(String)
     content = Column(String)

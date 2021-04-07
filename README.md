@@ -31,3 +31,10 @@ Files related to application are in the ``app`` or ``tests`` directories. Applic
     ├── resources        - strings that are used in web responses.
     ├── services         - logic that is not just crud related.
     └── main.py          - FastAPI application creation and configuration.
+
+
+어떤것이 적용 되어있는가?
+------------------
+1. [Repository Pattern](https://www.cosmicpython.com/book/chapter_02_repository.html)
+2. ...
+    
